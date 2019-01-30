@@ -1,0 +1,16 @@
+<div class="form-wrapper" [formGroup]="form">
+  <h1>Form Library</h1>
+<form (ngSubmit)="onSubmit.emit(this.form)" [formGroup]="form" class="form-horizontal">
+  
+  <div *ngFor="let field of fields" class="input-control">
+      <label class="col-md-3 form-control-label" [attr.for]="field.label">
+          {{field.label}}
+          <strong class="text-danger" *ngIf="field.required">*</strong>
+        </label>
+      <app-field-builder [field]="field" [form]="form"></app-field-builder>
+  </div>
+  <div class="submit-btn">
+      <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+</div>

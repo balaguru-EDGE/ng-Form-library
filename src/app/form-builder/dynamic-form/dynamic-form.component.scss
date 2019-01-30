@@ -1,0 +1,42 @@
+body{
+    margin: 0;padding: 0;
+}
+.form-wrapper {
+    padding: 20px 50px;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    box-sizing: border-box;
+    h1{
+        text-align: center;
+        font-family: sans-serif;
+    }
+    .input-control {
+        font-size: 13px;
+        font-family: sans-serif;
+        padding: 10px;
+        input,select,textarea {
+            padding: 7px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            &.form-control{
+                width: 100%;
+            }
+        }
+        >label{
+            padding-bottom: 8px;
+            display: block;
+        }
+    }
+    .submit-btn {
+        margin-top: 10px;
+        button {
+        width: 100%;
+        padding: 7px;
+        background: #333;
+        border: none;
+        color: #fff;
+        &:hover{background: #364298;}
+    }
+}
+}

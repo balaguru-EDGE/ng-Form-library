@@ -1,0 +1,8 @@
+<div class="input" [ngSwitch]="field.type">
+  <app-textbox *ngSwitchCase="'text'" [field]="field" [form]="form"></app-textbox>
+  <app-checkbox *ngSwitchCase="'checkbox'" [field]="field" [form]="form"></app-checkbox>
+  <app-dropdown *ngSwitchCase="'dropdown'" [field]="field" [form]="form"></app-dropdown>
+  <app-radio *ngSwitchCase="'radio'" [field]="field" [form]="form"></app-radio>
+  <div class="alert alert-danger my-1 p-2 fadeInDown animated"
+   *ngIf="!isValid && isDirty">{{field.label}} is required</div>
+</div>
